@@ -18,7 +18,7 @@ export const submitAnswers = async (req, res) => {
 
     await newAnswer.save();
 
-    res.json({ message: "Answers submitted successfully!" });
+    res.json({ message: "Answers submitted successfully!" ,redirectUrl: "https://studentspher.onrender.com", });
   } catch (error) {
     console.error("❌ Error saving answers:", error);
     res.status(500).json({ message: "Server error while saving answers" });
